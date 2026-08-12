@@ -15,6 +15,9 @@ A modern, desktop weather application built with Python. It fetches real-time we
 * **Image Processing:** [Pillow (PIL)](https://python-pillow.org/)
 * **HTTP Client:** [Requests](https://requests.readthedocs.io/)
 
+##Interface Design
+*Made with the assistance of Claude
+
 ## Getting Started
 
 ### Prerequisites
