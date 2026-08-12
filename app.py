@@ -10,6 +10,7 @@ def GUI(root):
     app = root
     app.title("Weather App")
     app.after(10,lambda :app.state('zoomed'))
+    # A card frame centered in the window
     card = CTkFrame(master=app, width=360, height=320, corner_radius=16)
     card.place(relx=0.5, rely=0.5, anchor="center")
     card.pack_propagate(False)
@@ -37,6 +38,7 @@ def GUI(root):
     )
     entry.pack(pady=5)
 
+    # Search icon loading
     img = Image.open("search.png")
     search_icon = CTkImage(light_image=img, dark_image=img, size=(20, 20))
 
