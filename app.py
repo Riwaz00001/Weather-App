@@ -59,11 +59,11 @@ def GUI(root):
         master=card,
         text="Search",
         image=search_icon,
-        compound="left",       # icon sits to the LEFT of the text
+        compound="left",   
         corner_radius=8,
         width=180,
         height=40,
-        command=on_search,     # was missing — button did nothing before
+        command=on_search,     
     )
     btn.pack(pady=(20, 10))
 

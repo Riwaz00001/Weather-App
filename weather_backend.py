@@ -10,6 +10,7 @@ def weather(city):
         API_KEY=os.environ["WEATHER_API_KEY"]
     except KeyError:
         error_message(" API key not Found. Check .env file")
+        return 
     try:
         response=requests.get(url,params={"key":API_KEY,"q":city},timeout=5)
     except requests.exceptions.ConnectionError:
@@ -39,18 +40,6 @@ def weather(city):
     humidity=current.get("humidity")
     cloud=current.get("cloud")
     rain=current.get("chance_of_rain")
-    print(f"Weather of {city} is: ")
-    print(f"Temperature in C:{temp_c}")
-    print(f"Temperature in F:{temp_f}")
-    print("Condition is:")
-    print(f"Weather: {weather_condition}")
-    print(f"Image: {img}")
-    print(f"Humidity: {humidity}%")
-    print(f"Cloud: {cloud}%")
-    print(f"Chance of Rain: {rain}%")
-    if img.startswith("//"):
-        img="https:"+img
-    print(img)
     result={"celsius":temp_c,
             "farenheit":temp_f,
             "weather":weather_condition,
